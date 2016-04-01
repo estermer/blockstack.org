@@ -10,7 +10,7 @@ import SummitPage                  from './pages/SummitPage'
 import DocsPage                    from './pages/DocsPage'
 import ArticlePage                 from './pages/ArticlePage'
 import NotFoundPage                from './pages/NotFoundPage'
-import docs                        from '../docs.json'
+import ProfilePage                 from './pages/ProfilePage'
 
 export default (
   <Router history={CreateBrowserHistory()} onUpdate={() => window.scrollTo(0, 0)}>
@@ -23,6 +23,7 @@ export default (
       <Route path="/docs/:docSection" component={ArticlePage} />
       <Route path="/about" component={ArticlePage} />
       <Route path="/summit" component={SummitPage} />
+      <Route path="/profile/:name" component={ProfilePage} />
 
       <Route path="*" component={NotFoundPage} />
 
