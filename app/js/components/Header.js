@@ -13,16 +13,18 @@ class Header extends Component {
   render() {
     return (
       <header className="container nav-header">
-        <nav className="navbar">
+        <nav className="navbar navbar-toggleable-xs">
+          <button className="navbar-toggler pull-xs-right" type="button" data-toggle="collapse" data-target="#mobile-nav" aria-controls="mobile-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="icon-bar landing-sandwich-icon"></span>
+            <span className="icon-bar landing-sandwich-icon"></span>
+            <span className="icon-bar landing-sandwich-icon"></span>
+          </button>
           <Link className="navbar-brand brand-bug" to="/">
             <img src="/images/logos/blockstack-bug-rev.svg" />
           </Link>
           <Link className="navbar-brand brand-logo" to="/">
             <img src="/images/logos/blockstack-logo-landscape-rev.svg" />
           </Link>
-          <button type="button" className="hamburger pull-xs-right collapsed" data-toggle="collapse" data-target="#mobile-nav" aria-controls="dropdown" aria-expanded="false">
-            <i className="fa fa-bars"></i>
-          </button>
           <ul className="nav navbar-nav desktop-nav">
             <li className="nav-item">
               <Link to="/install" className="nav-link">

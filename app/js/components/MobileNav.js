@@ -11,7 +11,7 @@ class MobileNav extends Component {
 
   render() {
     return (
-      <div className="mobile-nav collapse" id="mobile-nav" aria-expanded="false">
+      <div className="collapse navbar-collapse" id="mobile-nav" aria-expanded="false">
         <ul className="nav nav-justified">
           <li className="nav-item">
             <Link to="/intro" className="nav-link">
