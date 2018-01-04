@@ -7,6 +7,7 @@ import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
 
 import {BlogActions}  from '../datastore/Blog'
+import Loading          from '../components/Loading'
 
 function mapStateToProps(state) {
   return {
@@ -71,9 +72,11 @@ class BlogPage extends Component {
                     <h2 className="m-b-45">
                       Blockstack Blog
                     </h2>
-                    { this.state.posts.length == 0 && 
-                      <div className="m-t-100 m-b-100 text-center">
-                        <i className="fa fa-spinner fa-spin fa-3x fa-fw" />
+                    { this.state.posts.length == 0 &&
+                      <div>
+                        <Loading />
+                        <Loading />
+                        <Loading />
                       </div>
                     }
                     { this.state.posts.map((post, index) => {
